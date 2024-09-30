@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+}
+
+.left-container {
+  background-color: #fff;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: all 0.8s;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+
+.black-box {
+  position: absolute;
+  z-index: 99;
+  color: white;
+  padding: 0.5rem;
+  top: 12%;
+  left: 28%;
+  background-color: rgb(22, 18, 18);
+  width: 22%;
+  height: 22%;
+  border-radius: 5px;
+  display: none;
+}
+
+.black-inner {
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  gap: 2%;
+  /* text-transform: capitalize; */
+  color: gainsboro;
+  margin-top: 1%;
+}
+.black-inner i {
+  background-color: green;
+  color: lightgreen;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+.Enroll {
+  padding-left: 10px;
+  margin-bottom: 8px;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.left-header i {
+  font-size: 2.5rem;
+  transform: rotate(270deg);
+  transition: all 0.5s;
+  margin-left: 4px;
+  color: green;
+}
+
+.move-to-center {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 94%;
+  opacity: 1;
+}
+
+.left-header h1 {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.left-header h1 span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+button {
+  border: 1.4px solid black;
+  outline: none;
+  border-radius: 9999px;
+  padding: 0.6rem 1rem 0.6rem 1rem;
+  background-color: #fff;
+  color: green;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.main p {
+  color: gray;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.form input {
+  padding: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: rgb(230, 229, 229);
+  transition: all 0.1s ease-in-out;
+}
+
+.form input::placeholder {
+  font-size: 1rem;
+}
+
+.input-field:focus::placeholder {
+  position: absolute;
+  top: 10%;
+}
+
+.input-field:focus {
+  border: 2px solid green;
+  outline: none;
+}
+
+.input-border {
+  border: 2px solid greenyellow;
+}
+
+.form input:focus::placeholder,
+.form input:not(:placeholder-shown)::placeholder {
+  top: 10px;
+  font-size: 0.8rem;
+  color: green;
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.7rem;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+.login-button {
+  margin-top: 0.7rem;
+  font-size: 1rem;
+  padding: 1rem 0;
+  /* background-color: #15B392; */
+  background-color: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.forgot-password {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+.forgot-password p {
+  color: green;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer p {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+}
+
+.footer p span {
+  margin-left: 0.7rem;
+}
+
+.footer-span-2 {
+  color: green;
+}
+
+.right-container {
+  width: 50%;
+  height: 100%;
+  padding: 0.5rem;
+  transition: all 0.8s;
+}
+
+.expand-image {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+}
+.right-container div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.right-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-container {
+    width: 100%;
+    height: 50%;
+    margin-top: 1rem;
+  }
+  .header {
+    justify-content: space-around;
+  }
+
+  .right-container {
+    width: 100%;
+    height: 50%;
+  }
+  .footer {
+    display: none;
+  }
+}
